@@ -4794,3 +4794,62 @@ _**Agent (claude-opus-4-6 2026-04-08 14:19:09Z)**_
 2. **HTTPS 没改**：服务仍然是 `http://localhost:80`，前端 `market.ts` 写的是 `https://...` 还是调不通。要真上 HTTPS 得给 Node 加证书（`https.createServer` + 自签或 mkcert）。要我改成 http，还是真给它接 HTTPS？
 
 3. **vite 代理**还指向 3000，要不要一起改到 80？
+
+---
+
+_**User (2026-04-08 14:56:30Z)**_
+
+创建一个 题目.md。用于说明面试题的题目内容，题目1: java-server 提供的接口 http://127.0.0.1/indicator/capital/v1/grey_rank，按照turnover降序返回数据的前十条；题目2 ，按照 main_grey_capital / turnover * 100 算出 占比字段，数值保留2位小数，页面列表增加渲染 占比字段
+
+---
+
+_**Agent (claude-opus-4-6 2026-04-08 14:56:41Z)**_
+
+_**Agent (claude-opus-4-6 2026-04-08 14:56:49Z)**_
+
+<tool-use data-tool-type="write" data-tool-name="Write"><details>
+<summary>Tool use: **Write**</summary>
+
+```md
+# 面试题
+
+## 背景
+
+- `java-server` 提供接口：`http://127.0.0.1/indicator/capital/v1/grey_rank`
+- 返回数据结构：`data.stock_list` 为股票列表，每条包含 `stock_code`、`stock_name`、`turnover`、`main_grey_capital`、`main_listed_capital` 等字段
+- 前端工程位于 `front/`，页面 `views/FeaturedQuotes.vue` 通过 `marketApi.getDarkPlateBoard` 调用该接口并以列表形式渲染
+
+## 题目 1
+
+调用 `http://127.0.0.1/indicator/capital/v1/grey_rank` 接口，将返回的 `stock_list` 按 `turnover` **降序**排序，并只取前 **10** 条数据用于后续渲染。
+
+**要求**
+
+- 排序与截断逻辑放在前端
+- 不修改接口返回结构
+- 列表最终展示的就是排序、截断后的 10 条
+
+## 题目 2
+
+在题目 1 的基础上，为每条股票数据计算「占比」字段：
+
+\```
+占比 = main_grey_capital / turnover * 100
+\```
+
+**要求**
+
+- 数值保留 **2 位小数**
+- 在页面列表中**新增一列**渲染该「占比」字段
+- 数据为空或非法时显示 `--`
+
+```
+
+```text
+File created successfully at: D:\code\同顺会员\20260410-vant\题目.md
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:56:59Z)**_
+
+已创建 `题目.md`。
