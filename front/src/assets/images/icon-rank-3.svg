@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>03@2x</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.01题材速递首页" transform="translate(-36.000000, -1386.000000)">
+            <g id="03" transform="translate(36.000000, 1386.000000)">
+                <g id="0-元素/Label-bg-solid/蓝" fill="#FF9500">
+                    <rect id="标签/bg" x="0" y="0" width="32" height="32" rx="4"></rect>
+                </g>
+                <g id="3" transform="translate(10.120000, 7.288000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M10.8,0 L0.984,0 L0.984,2.976 L6.648,2.976 L1.584,8.088 L3.768,10.056 L3.936,9.912 C4.44,9.504 5.088,9.264 5.784,9.264 C7.44,9.264 8.808,10.68 8.808,12.456 C8.808,14.232 7.44,15.648 5.784,15.648 C4.464,15.648 3.336,14.76 2.928,13.512 L2.856,13.296 L0,14.064 L0.072,14.304 C0.84,16.8 3.096,18.624 5.784,18.624 C9.096,18.624 11.784,15.84 11.784,12.456 C11.784,9.576 9.864,7.152 7.272,6.48 L10.8,2.832 L10.8,0 Z" id="路径"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

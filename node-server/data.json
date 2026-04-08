@@ -1,0 +1,501 @@
+{
+    "data": {
+        "stock_list": [
+            {
+                "stock_code": "002195",
+                "stock_name": "岩山科技",
+                "market": "33",
+                "main_grey_capital": 6.122990414370974E8,
+                "main_listed_capital": 1.78304049E8,
+                "main_capital": 7.906030904370974E8,
+                "retail_capital": -7.906030904370974E8,
+                "turnover": 2.7008963E9,
+                "change_pct": 22.67,
+                "zf": 6.171428571428562
+            },
+            {
+                "stock_code": "601179",
+                "stock_name": "中国西电",
+                "market": "17",
+                "main_grey_capital": 6.566215486050079E8,
+                "main_listed_capital": 4.30258359E8,
+                "main_capital": 1.086879907605008E9,
+                "retail_capital": -1.086879907605008E9,
+                "turnover": 3.33314920922E9,
+                "change_pct": 19.7,
+                "zf": 6.947227788911161
+            },
+            {
+                "stock_code": "300017",
+                "stock_name": "网宿科技",
+                "market": "33",
+                "main_grey_capital": 1.1143863224023595E9,
+                "main_listed_capital": 3.055605E8,
+                "main_capital": 1.4199468224023595E9,
+                "retail_capital": -1.4199468224023595E9,
+                "turnover": 6.286198E9,
+                "change_pct": 17.73,
+                "zf": 14.766355140186922
+            },
+            {
+                "stock_code": "600396",
+                "stock_name": "华电辽能",
+                "market": "17",
+                "main_grey_capital": 3.4775338012003845E8,
+                "main_listed_capital": -4833481.0,
+                "main_capital": 3.4291989912003845E8,
+                "retail_capital": -3.4291989912003845E8,
+                "turnover": 2.06821734661E9,
+                "change_pct": 16.81,
+                "zf": 2.1276595744680873
+            },
+            {
+                "stock_code": "000592",
+                "stock_name": "平潭发展",
+                "market": "33",
+                "main_grey_capital": 6.29904202053307E8,
+                "main_listed_capital": -6.61132697E7,
+                "main_capital": 5.63790932353307E8,
+                "retail_capital": -5.63790932353307E8,
+                "turnover": 3.9544743E9,
+                "change_pct": 15.93,
+                "zf": 2.23880597014925
+            },
+            {
+                "stock_code": "002400",
+                "stock_name": "省广集团",
+                "market": "33",
+                "main_grey_capital": 2.940832989351487E8,
+                "main_listed_capital": 2.3939591E8,
+                "main_capital": 5.334792089351487E8,
+                "retail_capital": -5.334792089351487E8,
+                "turnover": 1.8997933E9,
+                "change_pct": 15.48,
+                "zf": 10.050251256281406
+            },
+            {
+                "stock_code": "600105",
+                "stock_name": "永鼎股份",
+                "market": "17",
+                "main_grey_capital": 7.662555039286101E8,
+                "main_listed_capital": 9.3387921E8,
+                "main_capital": 1.70013471392861E9,
+                "retail_capital": -1.70013471392861E9,
+                "turnover": 5.00298671818E9,
+                "change_pct": 15.32,
+                "zf": 9.99668983780204
+            },
+            {
+                "stock_code": "601138",
+                "stock_name": "工业富联",
+                "market": "17",
+                "main_grey_capital": 2.1128643064864712E9,
+                "main_listed_capital": 2.66688526E9,
+                "main_capital": 4.779749566486471E9,
+                "retail_capital": -4.779749566486471E9,
+                "turnover": 1.387506095924E10,
+                "change_pct": 15.23,
+                "zf": 7.664511220996579
+            },
+            {
+                "stock_code": "300308",
+                "stock_name": "中际旭创",
+                "market": "33",
+                "main_grey_capital": 3.7411005843805113E9,
+                "main_listed_capital": 2.0929988003E9,
+                "main_capital": 5.834099384680511E9,
+                "retail_capital": -5.834099384680511E9,
+                "turnover": 2.6479883E10,
+                "change_pct": 14.13,
+                "zf": 11.074524236114478
+            },
+            {
+                "stock_code": "002565",
+                "stock_name": "顺灏股份",
+                "market": "33",
+                "main_grey_capital": 6.336028047630523E8,
+                "main_listed_capital": 2.2746843100000003E8,
+                "main_capital": 8.610712357630523E8,
+                "retail_capital": -8.610712357630523E8,
+                "turnover": 4.5704566E9,
+                "change_pct": 13.86,
+                "zf": 7.303370786516865
+            },
+            {
+                "stock_code": "300058",
+                "stock_name": "蓝色光标",
+                "market": "33",
+                "main_grey_capital": 1.2464354831495748E9,
+                "main_listed_capital": 1.9451213602E9,
+                "main_capital": 3.191556843349575E9,
+                "retail_capital": -3.191556843349575E9,
+                "turnover": 9.0335348E9,
+                "change_pct": 13.8,
+                "zf": 20.01471670345842
+            },
+            {
+                "stock_code": "300502",
+                "stock_name": "新易盛",
+                "market": "33",
+                "main_grey_capital": 3.070806704429429E9,
+                "main_listed_capital": 1.138370699E9,
+                "main_capital": 4.209177403429429E9,
+                "retail_capital": -4.209177403429429E9,
+                "turnover": 2.2906043E10,
+                "change_pct": 13.41,
+                "zf": 9.330717244386312
+            },
+            {
+                "stock_code": "002342",
+                "stock_name": "巨力索具",
+                "market": "33",
+                "main_grey_capital": 2.2481350150147063E8,
+                "main_listed_capital": 4.24942694E8,
+                "main_capital": 6.497561955014706E8,
+                "retail_capital": -6.497561955014706E8,
+                "turnover": 1.7561427E9,
+                "change_pct": 12.8,
+                "zf": 10.015527950310553
+            },
+            {
+                "stock_code": "000815",
+                "stock_name": "美利云",
+                "market": "33",
+                "main_grey_capital": 3.781439866526831E8,
+                "main_listed_capital": 1.638724E7,
+                "main_capital": 3.945312266526831E8,
+                "retail_capital": -3.945312266526831E8,
+                "turnover": 2.9727298E9,
+                "change_pct": 12.72,
+                "zf": 6.558237145855195
+            },
+            {
+                "stock_code": "600666",
+                "stock_name": "奥瑞德",
+                "market": "17",
+                "main_grey_capital": 1.4368380882552585E8,
+                "main_listed_capital": 4.9861668E8,
+                "main_capital": 6.423004888255259E8,
+                "retail_capital": -6.423004888255259E8,
+                "turnover": 1.137312727E9,
+                "change_pct": 12.63,
+                "zf": 9.983079526226732
+            },
+            {
+                "stock_code": "002261",
+                "stock_name": "拓维信息",
+                "market": "33",
+                "main_grey_capital": 5.805126516842499E8,
+                "main_listed_capital": 2.248576398E8,
+                "main_capital": 8.053702914842498E8,
+                "retail_capital": -8.053702914842498E8,
+                "turnover": 4.8600697E9,
+                "change_pct": 11.94,
+                "zf": 7.068914522330672
+            },
+            {
+                "stock_code": "603601",
+                "stock_name": "再升科技",
+                "market": "17",
+                "main_grey_capital": 4.151157577772489E8,
+                "main_listed_capital": -1.62892883E8,
+                "main_capital": 2.5222287477724892E8,
+                "retail_capital": -2.5222287477724892E8,
+                "turnover": 3.87908604029E9,
+                "change_pct": 10.7,
+                "zf": 3.558460421205521
+            },
+            {
+                "stock_code": "002639",
+                "stock_name": "雪人集团",
+                "market": "33",
+                "main_grey_capital": 3.2713287863430125E8,
+                "main_listed_capital": -1.25904481E8,
+                "main_capital": 2.0122839763430125E8,
+                "retail_capital": -2.0122839763430125E8,
+                "turnover": 3.2117035E9,
+                "change_pct": 10.19,
+                "zf": 1.7518248175182454
+            },
+            {
+                "stock_code": "002131",
+                "stock_name": "利欧股份",
+                "market": "33",
+                "main_grey_capital": 3.72917764131191E8,
+                "main_listed_capital": 1.7144188565E9,
+                "main_capital": 2.087336620631191E9,
+                "retail_capital": -2.087336620631191E9,
+                "turnover": 3.7430497E9,
+                "change_pct": 9.96,
+                "zf": 9.958506224066385
+            },
+            {
+                "stock_code": "600410",
+                "stock_name": "华胜天成",
+                "market": "17",
+                "main_grey_capital": 7.268517633161521E8,
+                "main_listed_capital": 7.2207381E8,
+                "main_capital": 1.448925573316152E9,
+                "retail_capital": -1.448925573316152E9,
+                "turnover": 7.32594388607E9,
+                "change_pct": 9.92,
+                "zf": 8.828124999999991
+            }
+        ],
+        "block_list": [
+            {
+                "block_code": "885530",
+                "block_name": "黄金概念",
+                "market": "48",
+                "zf": 5.575,
+                "member_stock_cnt": 81,
+                "main_grey_capital_in_cnt": 77,
+                "main_grey_capital_in": 9.903316807796638E9,
+                "main_grey_pct": 11.26,
+                "stocks": [
+                    {
+                        "stock_code": "300139",
+                        "stock_name": "晓程科技",
+                        "market": "33",
+                        "zf": 16.828663998475314
+                    },
+                    {
+                        "stock_code": "301500",
+                        "stock_name": "飞南资源",
+                        "market": "33",
+                        "zf": 14.471847370870186
+                    }
+                ],
+                "main_grey_capital_in_cnt_pct": 95.06
+            },
+            {
+                "block_code": "886042",
+                "block_name": "存储芯片",
+                "market": "48",
+                "zf": 6.2991,
+                "member_stock_cnt": 173,
+                "main_grey_capital_in_cnt": 163,
+                "main_grey_capital_in": 2.1589378973619587E10,
+                "main_grey_pct": 9.82,
+                "stocks": [
+                    {
+                        "stock_code": "300475",
+                        "stock_name": "香农芯创",
+                        "market": "33",
+                        "zf": 20.003239390994494
+                    },
+                    {
+                        "stock_code": "688720",
+                        "stock_name": "艾森股份",
+                        "market": "17",
+                        "zf": 15.275918488769888
+                    }
+                ],
+                "main_grey_capital_in_cnt_pct": 94.22
+            },
+            {
+                "block_code": "885959",
+                "block_name": "PCB概念",
+                "market": "48",
+                "zf": 6.3546,
+                "member_stock_cnt": 194,
+                "main_grey_capital_in_cnt": 182,
+                "main_grey_capital_in": 2.151215671272116E10,
+                "main_grey_pct": 12.53,
+                "stocks": [
+                    {
+                        "stock_code": "688655",
+                        "stock_name": "迅捷兴",
+                        "market": "17",
+                        "zf": 20.0
+                    },
+                    {
+                        "stock_code": "688630",
+                        "stock_name": "芯碁微装",
+                        "market": "17",
+                        "zf": 20.0
+                    }
+                ],
+                "main_grey_capital_in_cnt_pct": 93.81
+            },
+            {
+                "block_code": "886058",
+                "block_name": "华为昇腾",
+                "market": "48",
+                "zf": 7.1324,
+                "member_stock_cnt": 103,
+                "main_grey_capital_in_cnt": 96,
+                "main_grey_capital_in": 1.1868618468834297E10,
+                "main_grey_pct": 17.52,
+                "stocks": [
+                    {
+                        "stock_code": "301070",
+                        "stock_name": "开勒股份",
+                        "market": "33",
+                        "zf": 20.000000000000004
+                    },
+                    {
+                        "stock_code": "300571",
+                        "stock_name": "平治信息",
+                        "market": "33",
+                        "zf": 19.993444772205827
+                    }
+                ],
+                "main_grey_capital_in_cnt_pct": 93.2
+            },
+            {
+                "block_code": "886044",
+                "block_name": "液冷服务器",
+                "market": "48",
+                "zf": 6.2374,
+                "member_stock_cnt": 191,
+                "main_grey_capital_in_cnt": 178,
+                "main_grey_capital_in": 2.9999510377097763E10,
+                "main_grey_pct": 12.55,
+                "stocks": [
+                    {
+                        "stock_code": "688392",
+                        "stock_name": "骄成超声",
+                        "market": "17",
+                        "zf": 16.071428571428573
+                    },
+                    {
+                        "stock_code": "301018",
+                        "stock_name": "申菱环境",
+                        "market": "33",
+                        "zf": 15.830596761408678
+                    }
+                ],
+                "main_grey_capital_in_cnt_pct": 93.19
+            },
+            {
+                "block_code": "886069",
+                "block_name": "人形机器人",
+                "market": "48",
+                "zf": 5.4626,
+                "member_stock_cnt": 423,
+                "main_grey_capital_in_cnt": 393,
+                "main_grey_capital_in": 3.2389040274564186E10,
+                "main_grey_pct": 11.96,
+                "stocks": [
+                    {
+                        "stock_code": "300571",
+                        "stock_name": "平治信息",
+                        "market": "33",
+                        "zf": 19.993444772205827
+                    },
+                    {
+                        "stock_code": "300679",
+                        "stock_name": "电连技术",
+                        "market": "33",
+                        "zf": 19.98804899910367
+                    }
+                ],
+                "main_grey_capital_in_cnt_pct": 92.91
+            },
+            {
+                "block_code": "885756",
+                "block_name": "芯片概念",
+                "market": "48",
+                "zf": 5.5607,
+                "member_stock_cnt": 853,
+                "main_grey_capital_in_cnt": 785,
+                "main_grey_capital_in": 9.00817577740991E10,
+                "main_grey_pct": 11.49,
+                "stocks": [
+                    {
+                        "stock_code": "300475",
+                        "stock_name": "香农芯创",
+                        "market": "33",
+                        "zf": 20.003239390994494
+                    },
+                    {
+                        "stock_code": "688630",
+                        "stock_name": "芯碁微装",
+                        "market": "17",
+                        "zf": 20.0
+                    }
+                ],
+                "main_grey_capital_in_cnt_pct": 92.03
+            },
+            {
+                "block_code": "885918",
+                "block_name": "快手概念",
+                "market": "48",
+                "zf": 7.7012,
+                "member_stock_cnt": 49,
+                "main_grey_capital_in_cnt": 45,
+                "main_grey_capital_in": 6.954911992078602E9,
+                "main_grey_pct": 14.63,
+                "stocks": [
+                    {
+                        "stock_code": "300058",
+                        "stock_name": "蓝色光标",
+                        "market": "33",
+                        "zf": 20.01471670345842
+                    },
+                    {
+                        "stock_code": "300571",
+                        "stock_name": "平治信息",
+                        "market": "33",
+                        "zf": 19.993444772205827
+                    }
+                ],
+                "main_grey_capital_in_cnt_pct": 91.84
+            },
+            {
+                "block_code": "886078",
+                "block_name": "商业航天",
+                "market": "48",
+                "zf": 5.3935,
+                "member_stock_cnt": 481,
+                "main_grey_capital_in_cnt": 441,
+                "main_grey_capital_in": 4.306135831892478E10,
+                "main_grey_pct": 12.92,
+                "stocks": [
+                    {
+                        "stock_code": "301232",
+                        "stock_name": "飞沃科技",
+                        "market": "33",
+                        "zf": 20.000000000000014
+                    },
+                    {
+                        "stock_code": "920021",
+                        "stock_name": "流金科技",
+                        "market": "151",
+                        "zf": 18.083961248654486
+                    }
+                ],
+                "main_grey_capital_in_cnt_pct": 91.68
+            },
+            {
+                "block_code": "886068",
+                "block_name": "Sora概念(文生视频)",
+                "market": "48",
+                "zf": 7.576,
+                "member_stock_cnt": 48,
+                "main_grey_capital_in_cnt": 44,
+                "main_grey_capital_in": 5.3756308596005745E9,
+                "main_grey_pct": 16.2,
+                "stocks": [
+                    {
+                        "stock_code": "920021",
+                        "stock_name": "流金科技",
+                        "market": "151",
+                        "zf": 18.083961248654486
+                    },
+                    {
+                        "stock_code": "301171",
+                        "stock_name": "易点天下",
+                        "market": "33",
+                        "zf": 16.57524445504413
+                    }
+                ],
+                "main_grey_capital_in_cnt_pct": 91.67
+            }
+        ],
+        "update_time": "2026-04-08 15:30"
+    },
+    "status_code": 0,
+    "status_msg": "请求成功!"
+}

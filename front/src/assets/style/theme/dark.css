@@ -1,0 +1,20 @@
+:root.light {
+  --bg-color-1: #0f0f0f;
+}
+
+:root {
+  /* 基础颜色 */
+  --primary-color: #409eff;
+  --background-color: #1e1e1e;
+  --background-color-light: #2d2d2d;
+  --border-color: #4a4a4a;
+  
+  /* 文字颜色 */
+  --text-color: rgba(0,0,0,0.84);
+  --text-color-secondary: rgba(0,0,0,0.5);
+  
+  /* 涨跌颜色 */
+  --up-color: #FF2436;
+  --down-color: #07AB4B;
+  --plan-color: #858585;
+}

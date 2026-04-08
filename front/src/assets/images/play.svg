@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>播放</title>
+    <defs>
+        <circle id="path-1" cx="22" cy="22" r="22"></circle>
+        <path d="M25.4045875,16.0066282 L32.6194799,26.9345111 C33.0669723,27.6122961 32.8802834,28.5245137 32.2024985,28.9720062 C31.9620797,29.1307373 31.6803332,29.2153562 31.3922416,29.2153562 L16.9624569,29.2153562 C16.1502735,29.2153562 15.4918687,28.5569514 15.4918687,27.7447679 C15.4918687,27.4566764 15.5764876,27.1749299 15.7352187,26.9345111 L22.9501111,16.0066282 C23.3976035,15.3288433 24.3098211,15.1421544 24.9876061,15.5896468 C25.1533281,15.6990611 25.2951732,15.8409063 25.4045875,16.0066282 Z" id="path-3"></path>
+        <filter x="-23.8%" y="-31.9%" width="147.6%" height="171.7%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.658426921   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0943236451 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="播放" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="位图" opacity="0.5">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="蒙版" fill-opacity="0.1" fill="#000000" xlink:href="#path-1"></use>
+        </g>
+        <g id="多边形" transform="translate(24.177349, 21.681587) rotate(-270.000000) translate(-24.177349, -21.681587) ">
+            <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+            <use fill="#666666" fill-rule="evenodd" xlink:href="#path-3"></use>
+        </g>
+    </g>
+</svg>
