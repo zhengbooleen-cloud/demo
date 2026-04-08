@@ -4705,3 +4705,92 @@ _**Agent (claude-opus-4-6 2026-04-08 14:07:03Z)**_
 - `types/tools.d.ts` 删 `ErrorReportParam`
 - `apis/http.ts` 简化为直接 `.then(r => r.data)`，移除 success/fail 包装和状态码探测
 - `views/FeaturedQuotes.vue` 改用 `console.error`
+
+---
+
+_**User (2026-04-08 14:16:48Z)**_
+
+把node-server的接口路径改成：https://localhost:80/indicator/capital/v1/grey_rank
+
+---
+
+_**Agent (claude-opus-4-6 2026-04-08 14:17:12Z)**_
+
+_**Agent (claude-opus-4-6 2026-04-08 14:17:14Z)**_
+
+<tool-use data-tool-type="write" data-tool-name="Edit"><details>
+<summary>Tool use: **Edit**</summary>
+
+```text
+The file D:\code\同顺会员\20260410-vant\node-server\index.js has been updated successfully.
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:17:26Z)**_
+
+<tool-use data-tool-type="write" data-tool-name="Edit"><details>
+<summary>Tool use: **Edit**</summary>
+
+```text
+The file D:\code\同顺会员\20260410-vant\node-server\index.js has been updated successfully.
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:17:39Z)**_
+
+<tool-use data-tool-type="write" data-tool-name="Edit"><details>
+<summary>Tool use: **Edit**</summary>
+
+```text
+The file D:\code\同顺会员\20260410-vant\node-server\README.md has been updated. All occurrences were successfully replaced.
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:18:01Z)**_
+
+完成。注意：
+
+1. **HTTPS/80 端口的事**：node-server 仍跑在 `http://localhost:3000`，没改协议和端口（搭 HTTPS 要证书，80 端口在 Windows 也通常被占用）。如果你确实要 `https://localhost:80`，告诉我我再调。
+2. **前端 `market.ts`** 当前请求的是 `https://localhost:80/indicator/capital/v1/grey_rank`（绝对地址，不走 vite 代理）—— 跟 node-server 实际监听的 `http://127.0.0.1:3000` 对不上，会调不通。要不要我改回相对路径 `/indicator/capital/v1/grey_rank` 走 vite 代理？
+
+---
+
+_**User (2026-04-08 14:18:30Z)**_
+
+确实需要80端口
+
+---
+
+_**Agent (claude-opus-4-6 2026-04-08 14:18:41Z)**_
+
+_**Agent (claude-opus-4-6 2026-04-08 14:18:42Z)**_
+
+<tool-use data-tool-type="write" data-tool-name="Edit"><details>
+<summary>Tool use: **Edit**</summary>
+
+```text
+The file D:\code\同顺会员\20260410-vant\node-server\index.js has been updated successfully.
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:18:56Z)**_
+
+<tool-use data-tool-type="write" data-tool-name="Edit"><details>
+<summary>Tool use: **Edit**</summary>
+
+```text
+The file D:\code\同顺会员\20260410-vant\node-server\README.md has been updated. All occurrences were successfully replaced.
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:19:09Z)**_
+
+已改为 80 端口。⚠️ 注意：
+
+1. **Windows 上 80 端口可能被占用**（IIS / Skype / 其他服务）。如果启动报 `EADDRINUSE` 或 `EACCES`，可以：
+   - `netstat -ano | findstr :80` 看谁占着
+   - 或临时换：`PORT=8000 npm start`
+
+2. **HTTPS 没改**：服务仍然是 `http://localhost:80`，前端 `market.ts` 写的是 `https://...` 还是调不通。要真上 HTTPS 得给 Node 加证书（`https.createServer` + 自签或 mkcert）。要我改成 http，还是真给它接 HTTPS？
+
+3. **vite 代理**还指向 3000，要不要一起改到 80？
