@@ -4259,3 +4259,449 @@ git push -u origin main
 ```bash
 git config --global --unset http.sslVerify
 ```
+
+---
+
+_**User (2026-04-08 14:02:56Z)**_
+
+VITE_APP_PREFIX_APIGATE 也不需要用到了吧
+
+---
+
+_**Agent (claude-opus-4-6 2026-04-08 14:03:01Z)**_
+
+_**Agent (claude-opus-4-6 2026-04-08 14:03:03Z)**_
+
+<tool-use data-tool-type="search" data-tool-name="Grep"><details>
+<summary>Tool use: **Grep**</summary>
+ path `./\front` pattern `VITE_APP_PREFIX_APIGATE|prefix\.apigate|apigate`
+
+```text
+D:\code\同顺会员\20260410-vant\front\.env.test:4:VITE_APP_PREFIX_APIGATE = './'
+D:\code\同顺会员\20260410-vant\front\.env.release:4:VITE_APP_PREFIX_APIGATE = './'
+D:\code\同顺会员\20260410-vant\front\.env.dev:3:VITE_APP_PREFIX_APIGATE = './'
+D:\code\同顺会员\20260410-vant\front\src\apis\index.ts:1:const { VITE_APP_PREFIX_APIGATE } = import.meta.env;
+D:\code\同顺会员\20260410-vant\front\src\apis\index.ts:5:  apigate: VITE_APP_PREFIX_APIGATE
+[result-id: r20]
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:03:08Z)**_
+
+对，没业务在用了。清理：
+
+_**Agent (claude-opus-4-6 2026-04-08 14:03:09Z)**_
+
+<tool-use data-tool-type="read" data-tool-name="Read"><details>
+<summary>Tool use: **Read**</summary>
+ `./\front\src\apis\index.ts`
+
+```text
+File unchanged since last read. The content from the earlier Read tool_result in this conversation is still current — refer to that instead of re-reading.
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:03:14Z)**_
+
+<tool-use data-tool-type="write" data-tool-name="Write"><details>
+<summary>Tool use: **Write**</summary>
+
+```typescript
+export * from './market';
+
+```
+
+```text
+The file D:\code\同顺会员\20260410-vant\front\src\apis\index.ts has been updated successfully.
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:03:22Z)**_
+
+<tool-use data-tool-type="read" data-tool-name="Read"><details>
+<summary>Tool use: **Read**</summary>
+ `./\front\.env.dev`
+
+```text
+1	VITE_APP_CURRENTMODE = 'dev'
+2	VITE_APP_BASE_URL = './'
+3	VITE_APP_PREFIX_APIGATE = './'
+4
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:03:26Z)**_
+
+<tool-use data-tool-type="write" data-tool-name="Edit"><details>
+<summary>Tool use: **Edit**</summary>
+
+```text
+The file D:\code\同顺会员\20260410-vant\front\.env.dev has been updated successfully.
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:03:32Z)**_
+
+<tool-use data-tool-type="read" data-tool-name="Read"><details>
+<summary>Tool use: **Read**</summary>
+ `./\front\.env.test`
+
+```text
+1	NODE_ENV = 'production'
+2	VITE_APP_CURRENTMODE = 'test'
+3	VITE_APP_BASE_URL = './'
+4	VITE_APP_PREFIX_APIGATE = './'
+5
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:03:37Z)**_
+
+<tool-use data-tool-type="write" data-tool-name="Edit"><details>
+<summary>Tool use: **Edit**</summary>
+
+```text
+The file D:\code\同顺会员\20260410-vant\front\.env.test has been updated successfully.
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:03:44Z)**_
+
+<tool-use data-tool-type="read" data-tool-name="Read"><details>
+<summary>Tool use: **Read**</summary>
+ `./\front\.env.release`
+
+```text
+1	NODE_ENV = 'production'
+2	VITE_APP_CURRENTMODE = 'release'
+3	VITE_APP_BASE_URL = './'
+4	VITE_APP_PREFIX_APIGATE = './'
+5
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:03:51Z)**_
+
+<tool-use data-tool-type="write" data-tool-name="Edit"><details>
+<summary>Tool use: **Edit**</summary>
+
+```text
+The file D:\code\同顺会员\20260410-vant\front\.env.release has been updated successfully.
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:04:00Z)**_
+
+清理完成：
+
+- `src/apis/index.ts` 删掉 `prefix.apigate` 和对 `VITE_APP_PREFIX_APIGATE` 的读取
+- `.env.dev` / `.env.test` / `.env.release` 删掉 `VITE_APP_PREFIX_APIGATE` 行
+
+---
+
+_**User (2026-04-08 14:05:24Z)**_
+
+把errorReport相关代码去掉
+
+---
+
+_**Agent (claude-opus-4-6 2026-04-08 14:05:31Z)**_
+
+_**Agent (claude-opus-4-6 2026-04-08 14:05:32Z)**_
+
+<tool-use data-tool-type="search" data-tool-name="Grep"><details>
+<summary>Tool use: **Grep**</summary>
+ path `./\front` pattern `errorReport`
+
+```text
+D:\code\同顺会员\20260410-vant\front\CLAUDE.md:38:**API layer** (`src/apis/`): `http.ts` exports a single `request` instance wrapping axios. Both `get`/`post` resolve with `response.data` and call `errorReport` from `@/utils/tools` whenever the response status field is non-zero. Note the status field is **not unified** — the wrapper probes `status_code`, `errorcode`, `errorCode`, `code` in that order, so when adding new endpoints don't assume a single key. `baseURL` comes from `VITE_API_BASE_URL`; `withCredentials: true`.
+D:\code\同顺会员\20260410-vant\front\src\apis\http.ts:3:import { errorReport } from '@/utils/tools';
+D:\code\同顺会员\20260410-vant\front\src\apis\http.ts:18:    errorReport({
+D:\code\同顺会员\20260410-vant\front\src\apis\http.ts:29:  errorReport({
+D:\code\同顺会员\20260410-vant\front\src\views\FeaturedQuotes.vue:18:import { errorReport } from '@/utils/tools';
+D:\code\同顺会员\20260410-vant\front\src\views\FeaturedQuotes.vue:33:    errorReport({
+D:\code\同顺会员\20260410-vant\front\src\utils\tools.ts:5:const errorReport = ({ name, message, stack }: ErrorReportParam) => {
+D:\code\同顺会员\20260410-vant\front\src\utils\tools.ts:6:  console.error('[errorReport]', name, message, stack);
+D:\code\同顺会员\20260410-vant\front\src\utils\tools.ts:45:  errorReport,
+[result-id: r21]
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:05:37Z)**_
+
+<tool-use data-tool-type="read" data-tool-name="Read"><details>
+<summary>Tool use: **Read**</summary>
+ `./\front\src\utils\tools.ts`
+
+```text
+1	import { INTEGER_2 } from '@/utils/constant';
+2	import { ErrorReportParam } from '@/types/tools.d';
+3	
+4	// 错误上报
+5	const errorReport = ({ name, message, stack }: ErrorReportParam) => {
+6	  console.error('[errorReport]', name, message, stack);
+7	};
+8	
+9	// 判断是否是有效值
+10	const judgeIsNull = (val: any) => {
+11	  if (val !== 0 && !val) {
+12	    return '--';
+13	  }
+14	  if (typeof val === 'number' && Number.isNaN(val)) {
+15	    return '--';
+16	  }
+17	  return val;
+18	};
+19	
+20	/**
+21	 * @param value Number
+22	 * @param format +M.N%，+：代表是否增加正号；M：固定占位；.N: 保留小数位数；%：是否增加百分号；
+23	 */
+24	const mathFormatHandler = function (value: any, format: string) {
+25	  const isInvalidFormat = /^\+?M(\.[1-9])?%?$/.test(format);
+26	  const currentNumber = value;
+27	  if (!isInvalidFormat || judgeIsNull(currentNumber) === '--') {
+28	    return '--';
+29	  }
+30	  const isDecimal = Number(
+31	    format.indexOf('.') >= 0 &&
+32	      format.substring(format.indexOf('.') + 1, format.indexOf('.') + INTEGER_2)
+33	  );
+34	  const isPercent = format.includes('%');
+35	  const isPositive = format.includes('+');
+36	  const currentVal = parseFloat(currentNumber);
+37	  let resultVal: string | number = parseFloat(currentNumber);
+38	  resultVal = isDecimal ? resultVal.toFixed(isDecimal) : resultVal;
+39	  resultVal = isPercent ? `${resultVal}%` : resultVal;
+40	  resultVal = isPositive && currentVal > 0 ? `+${resultVal}` : resultVal;
+41	  return String(resultVal);
+42	};
+43	
+44	export {
+45	  errorReport,
+46	  judgeIsNull,
+47	  mathFormatHandler,
+48	};
+49	
+[result-id: r22]
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:05:43Z)**_
+
+<tool-use data-tool-type="read" data-tool-name="Read"><details>
+<summary>Tool use: **Read**</summary>
+ `./\front\src\apis\http.ts`
+
+```text
+1	import axios from 'axios';
+2	import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
+3	import { errorReport } from '@/utils/tools';
+4	
+5	// 接口调用成功
+6	const successFn = (response: AxiosResponse<any>, resolve: (value: any) => void, params: any) => {
+7	  const { data, config } = response;
+8	  let statusKey = 'status_code';
+9	  // 本项目部分老接口的状态码字段不统一，找出额外状态码避免不必要的异常上报
+10	  const statusKeyList = ['errorcode', 'errorCode', 'code'];
+11	  for (const key of statusKeyList) {
+12	    if (Object.keys(data).includes(key)) {
+13	      statusKey = key;
+14	      break;
+15	    }
+16	  }
+17	  if (data[statusKey] !== 0) {
+18	    errorReport({
+19	      name: '接口数据异常报错',
+20	      message: `url:${config?.url},code:${data[statusKey]},params:${JSON.stringify(params)}`,
+21	      stack: `接口返回为${JSON.stringify(data)}`
+22	    });
+23	  }
+24	  resolve(data);
+25	};
+26	
+27	// 接口调用失败处理
+28	const failFn = (error: Error, reject: (reason?: any) => void, params: any, url: string) => {
+29	  errorReport({
+30	    name: '接口调用报错',
+31	    message: `url:${url},params:${JSON.stringify(params)},message:${error.message}`,
+32	    stack: error.stack
+33	  });
+34	  reject(error);
+35	};
+36	
+37	// 创建 axios 实例
+38	const instance: AxiosInstance = axios.create({
+39	  baseURL: import.meta.env.VITE_API_BASE_URL || '',
+40	  timeout: 15000,
+41	  withCredentials: true,
+42	  headers: {
+43	    'Content-Type': 'application/json'
+44	  }
+45	});
+46	
+47	// 请求拦截器
+48	instance.interceptors.request.use(
+49	  config => {
+50	    return config;
+51	  },
+52	  error => {
+53	    return Promise.reject(error);
+54	  }
+55	);
+56	
+57	// 响应拦截器
+58	instance.interceptors.response.use(
+59	  response => {
+60	    return response;
+61	  },
+62	  error => {
+63	    return Promise.reject(error);
+64	  }
+65	);
+66	
+67	class Request {
+68	  /**
+69	   * GET封装
+70	   * @param {string} url 请求地址
+71	   * @param {object} params 请求配置
+72	   * @returns {Promise}
+73	   */
+74	  get(url: string, params: any, config?: AxiosRequestConfig | undefined): Promise<any> {
+75	    return new Promise((resolve, reject) => {
+76	      instance
+77	        .get(url, { params, ...config })
+78	        .then((response: AxiosResponse<any>) => {
+79	          successFn(response, resolve, params);
+80	        })
+81	        .catch((error: Error) => {
+82	          failFn(error, reject, params, url);
+83	        });
+84	    });
+85	  }
+86	
+87	}
+88	const request: Request = new Request();
+89	
+90	export default request;
+91	
+[result-id: r23]
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:05:54Z)**_
+
+<tool-use data-tool-type="write" data-tool-name="Edit"><details>
+<summary>Tool use: **Edit**</summary>
+
+```text
+The file D:\code\同顺会员\20260410-vant\front\src\apis\http.ts has been updated successfully.
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:06:04Z)**_
+
+<tool-use data-tool-type="write" data-tool-name="Edit"><details>
+<summary>Tool use: **Edit**</summary>
+
+```text
+The file D:\code\同顺会员\20260410-vant\front\src\apis\http.ts has been updated successfully.
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:06:11Z)**_
+
+<tool-use data-tool-type="write" data-tool-name="Edit"><details>
+<summary>Tool use: **Edit**</summary>
+
+```text
+The file D:\code\同顺会员\20260410-vant\front\src\views\FeaturedQuotes.vue has been updated successfully.
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:06:17Z)**_
+
+<tool-use data-tool-type="write" data-tool-name="Edit"><details>
+<summary>Tool use: **Edit**</summary>
+
+```text
+The file D:\code\同顺会员\20260410-vant\front\src\views\FeaturedQuotes.vue has been updated successfully.
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:06:26Z)**_
+
+<tool-use data-tool-type="write" data-tool-name="Edit"><details>
+<summary>Tool use: **Edit**</summary>
+
+```text
+The file D:\code\同顺会员\20260410-vant\front\src\utils\tools.ts has been updated successfully.
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:06:31Z)**_
+
+<tool-use data-tool-type="write" data-tool-name="Edit"><details>
+<summary>Tool use: **Edit**</summary>
+
+```text
+The file D:\code\同顺会员\20260410-vant\front\src\utils\tools.ts has been updated successfully.
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:06:39Z)**_
+
+顺手看下 `types/tools.d.ts` 里 `ErrorReportParam` 是否还有别的引用：
+
+_**Agent (claude-opus-4-6 2026-04-08 14:06:41Z)**_
+
+<tool-use data-tool-type="search" data-tool-name="Grep"><details>
+<summary>Tool use: **Grep**</summary>
+ path `./\front` pattern `ErrorReportParam`
+
+```text
+D:\code\同顺会员\20260410-vant\front\src\types\tools.d.ts:6:interface ErrorReportParam {
+D:\code\同顺会员\20260410-vant\front\src\types\tools.d.ts:11:export type { ErrorReportParam };
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:06:46Z)**_
+
+<tool-use data-tool-type="read" data-tool-name="Read"><details>
+<summary>Tool use: **Read**</summary>
+ `./\front\src\types\tools.d.ts`
+
+```text
+1	export enum Os {
+2	  iphone = 'iphone',
+3	  gphone = 'gphone',
+4	
+5	}
+6	interface ErrorReportParam {
+7	  name: string;
+8	  message: string;
+9	  stack: string | undefined;
+10	}
+11	export type { ErrorReportParam };
+12
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:06:57Z)**_
+
+<tool-use data-tool-type="write" data-tool-name="Edit"><details>
+<summary>Tool use: **Edit**</summary>
+
+```text
+The file D:\code\同顺会员\20260410-vant\front\src\types\tools.d.ts has been updated successfully.
+```
+</details></tool-use>
+
+_**Agent (claude-opus-4-6 2026-04-08 14:07:03Z)**_
+
+完成。`errorReport` 已彻底移除：
+
+- `utils/tools.ts` 删函数和导出
+- `types/tools.d.ts` 删 `ErrorReportParam`
+- `apis/http.ts` 简化为直接 `.then(r => r.data)`，移除 success/fail 包装和状态码探测
+- `views/FeaturedQuotes.vue` 改用 `console.error`
