@@ -4,8 +4,10 @@ description: >-
   Commits work after a phase of tasks: inspects git state, creates an
   agent-prefixed feature branch when on mainline branches, runs hook-based
   quality checks, excludes temp artifacts via .gitignore, stages intentionally,
-  and commits with a structured conventional message. Use when the user asks to
-  commit staged work, finish a phase with a commit, or follow the project’s
+  and commits with a structured conventional message. After an explicit user
+  trigger (e.g. @phase-push), runs git push which is gated by pre-push review
+  in .cursor/hooks.json. Use when the user asks to commit staged work, finish a
+  phase with a commit, push after a manual reminder, or follow the project’s
   post-task commit workflow (including 阶段性提交、规范提交、agent 分支).
 ---
 
@@ -70,9 +72,20 @@ Permission gate:
 git commit -m "<subject>"
 ```
 
+**Git amend / 修订策略**（与历史 `.cursor/hooks.json` 约定一致）：仅在 `agent-*` 分支上进行需要 amend 的本地修订；`--amend` 仅用于用户明确要求，或 hooks 自动改写后的最近一次、**尚未 push** 的 Agent 本地提交；若 `git commit` 失败，禁止用 amend 掩盖，应新建 commit 修复。
+
+## 7. Push（一次手动提醒 + 自动审查）
+
+- **默认不要主动 `git push`**，除非用户发出本流程约定的**明确一次性提醒**（触发语）。
+- **推荐触发语**：`@phase-push`，或中文「**执行受审查的 push**」。用户只须提醒一次，Agent 随后执行 push 流程（含必要时的 `git push -u origin <branch>`）。
+- **自动审查**：`.cursor/hooks.json` 中 `beforeShellExecution` 会在 **`git push` 真正执行前**运行与第 3 节同源的检查（`java-server` Maven 编译、`front` pnpm lint、`node-server` 语法检查）。未通过时 Cursor 会拦截该次 push，并返回审查失败说明。
+- Agent 在触发语之后：快速查看 `git status` / 当前分支与远端关系，然后直接执行 `git push`；**不必在聊天里重复跑一遍与 hook 相同的检查**，除非用户需要排查失败日志。
+- 若本地 Cursor 未加载 hooks、push 未被拦截，则**手动先执行第 3 节所列检查**，通过后再 `git push`。
+
 ## Checklist
 
 - [ ] `git status` reviewed; branch rule applied (mainline → new `agent-…` branch).
 - [ ] Hooks / quality checks passed (or fixed and re-run).
 - [ ] No junk or secrets staged; `.gitignore` updated if needed.
 - [ ] Staged files are intentional; message matches **type(scope): 动作 + 范围 + 改动**.
+- [ ] `git push` only after user trigger (`@phase-push` 或约定语句）；pre-push 自动审查由 hook 承担。
